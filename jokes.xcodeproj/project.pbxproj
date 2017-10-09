@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421B823E1F8A5F0800C41F1E /* AddJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B823D1F8A5F0800C41F1E /* AddJokeViewController.swift */; };
+		421B82401F8A61D600C41F1E /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B823F1F8A61D600C41F1E /* Joke.swift */; };
+		421B82431F8A666E00C41F1E /* AddJokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B82421F8A666E00C41F1E /* AddJokeViewModel.swift */; };
+		421B82451F8A673900C41F1E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B82441F8A673900C41F1E /* User.swift */; };
+		4232CC041F8BABA50061CC7E /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4232CC031F8BABA50061CC7E /* JokeViewModel.swift */; };
+		4232CC061F8BAED60061CC7E /* GetCurrentUserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4232CC051F8BAED60061CC7E /* GetCurrentUserType.swift */; };
+		42AC3F141F8A8025007BFCC7 /* GetUserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC3F131F8A8025007BFCC7 /* GetUserType.swift */; };
+		42AC3F161F8A840F007BFCC7 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC3F151F8A840F007BFCC7 /* Errors.swift */; };
+		42AC3F181F8A92A2007BFCC7 /* JokeValidateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC3F171F8A92A2007BFCC7 /* JokeValidateType.swift */; };
 		42C4685C1F8924480058E02A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C4685B1F8924480058E02A /* Result.swift */; };
 		42C4685E1F8946BD0058E02A /* UIAlertController+showErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C4685D1F8946BD0058E02A /* UIAlertController+showErrorAlert.swift */; };
-		42C468601F895CCE0058E02A /* UITextField+rxıindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C4685F1F895CCE0058E02A /* UITextField+rxıindings.swift */; };
-		42C468621F8960B20058E02A /* GetUserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C468611F8960B20058E02A /* GetUserType.swift */; };
+		42C468601F895CCE0058E02A /* UITextField+rxBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C4685F1F895CCE0058E02A /* UITextField+rxBindings.swift */; };
+		42C468621F8960B20058E02A /* CreateUserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C468611F8960B20058E02A /* CreateUserType.swift */; };
 		42C468641F8960C80058E02A /* SignInType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C468631F8960C80058E02A /* SignInType.swift */; };
 		42C468661F8960D60058E02A /* SignUpType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C468651F8960D60058E02A /* SignUpType.swift */; };
 		42C468681F8962FC0058E02A /* UsernameValideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C468671F8962FC0058E02A /* UsernameValideType.swift */; };
@@ -31,15 +40,26 @@
 		42C98C951F87C3FA000FC479 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C98C941F87C3FA000FC479 /* LoginPageViewController.swift */; };
 		42C98C971F87CC60000FC479 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C98C961F87CC60000FC479 /* DataService.swift */; };
 		42C98C9B1F87D28F000FC479 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C98C9A1F87D28F000FC479 /* CreateAccountViewModel.swift */; };
+		42FD8F141F8AC61F0092AE9D /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD8F131F8AC61F0092AE9D /* JokeTableViewCell.swift */; };
+		42FD8F161F8AC74C0092AE9D /* JokesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD8F151F8AC74C0092AE9D /* JokesViewModel.swift */; };
 		5A4E0D5D43565DAE759CECA0 /* Pods_jokes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E781F34BA2658F7D5CFD45AF /* Pods_jokes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02DC2D746AADCB17CD6A4DF0 /* Pods-jokes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jokes.release.xcconfig"; path = "Pods/Target Support Files/Pods-jokes/Pods-jokes.release.xcconfig"; sourceTree = "<group>"; };
+		421B823D1F8A5F0800C41F1E /* AddJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJokeViewController.swift; sourceTree = "<group>"; };
+		421B823F1F8A61D600C41F1E /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		421B82421F8A666E00C41F1E /* AddJokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJokeViewModel.swift; sourceTree = "<group>"; };
+		421B82441F8A673900C41F1E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4232CC031F8BABA50061CC7E /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
+		4232CC051F8BAED60061CC7E /* GetCurrentUserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentUserType.swift; sourceTree = "<group>"; };
+		42AC3F131F8A8025007BFCC7 /* GetUserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserType.swift; sourceTree = "<group>"; };
+		42AC3F151F8A840F007BFCC7 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		42AC3F171F8A92A2007BFCC7 /* JokeValidateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeValidateType.swift; sourceTree = "<group>"; };
 		42C4685B1F8924480058E02A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		42C4685D1F8946BD0058E02A /* UIAlertController+showErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+showErrorAlert.swift"; sourceTree = "<group>"; };
-		42C4685F1F895CCE0058E02A /* UITextField+rxıindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+rxıindings.swift"; sourceTree = "<group>"; };
-		42C468611F8960B20058E02A /* GetUserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserType.swift; sourceTree = "<group>"; };
+		42C4685F1F895CCE0058E02A /* UITextField+rxBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+rxBindings.swift"; sourceTree = "<group>"; };
+		42C468611F8960B20058E02A /* CreateUserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserType.swift; sourceTree = "<group>"; };
 		42C468631F8960C80058E02A /* SignInType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInType.swift; sourceTree = "<group>"; };
 		42C468651F8960D60058E02A /* SignUpType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpType.swift; sourceTree = "<group>"; };
 		42C468671F8962FC0058E02A /* UsernameValideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameValideType.swift; sourceTree = "<group>"; };
@@ -62,6 +82,8 @@
 		42C98C941F87C3FA000FC479 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		42C98C961F87CC60000FC479 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		42C98C9A1F87D28F000FC479 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		42FD8F131F8AC61F0092AE9D /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
+		42FD8F151F8AC74C0092AE9D /* JokesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewModel.swift; sourceTree = "<group>"; };
 		D4461B6B95CEA68F47C640F0 /* Pods-jokes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jokes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jokes/Pods-jokes.debug.xcconfig"; sourceTree = "<group>"; };
 		E781F34BA2658F7D5CFD45AF /* Pods_jokes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jokes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +100,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		421B82411F8A61DB00C41F1E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42C4685B1F8924480058E02A /* Result.swift */,
+				421B823F1F8A61D600C41F1E /* Joke.swift */,
+				421B82441F8A673900C41F1E /* User.swift */,
+				42AC3F151F8A840F007BFCC7 /* Errors.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		42C4686F1F89645F0058E02A /* ValidationProtocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +118,7 @@
 				42C4686D1F89640A0058E02A /* IsAllValidType.swift */,
 				42C468691F8963120058E02A /* EmailValideType.swift */,
 				42C4686B1F8963660058E02A /* PasswordValidateTypes.swift */,
+				42AC3F171F8A92A2007BFCC7 /* JokeValidateType.swift */,
 			);
 			name = ValidationProtocols;
 			sourceTree = "<group>";
@@ -92,9 +126,11 @@
 		42C468701F89646E0058E02A /* SigningProtocols */ = {
 			isa = PBXGroup;
 			children = (
-				42C468611F8960B20058E02A /* GetUserType.swift */,
+				42C468611F8960B20058E02A /* CreateUserType.swift */,
 				42C468631F8960C80058E02A /* SignInType.swift */,
 				42C468651F8960D60058E02A /* SignUpType.swift */,
+				42AC3F131F8A8025007BFCC7 /* GetUserType.swift */,
+				4232CC051F8BAED60061CC7E /* GetCurrentUserType.swift */,
 			);
 			name = SigningProtocols;
 			sourceTree = "<group>";
@@ -103,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				42C4685D1F8946BD0058E02A /* UIAlertController+showErrorAlert.swift */,
-				42C4685F1F895CCE0058E02A /* UITextField+rxıindings.swift */,
+				42C4685F1F895CCE0058E02A /* UITextField+rxBindings.swift */,
 				42C468711F8964BD0058E02A /* Variable+validatingBySymbolsCount.swift */,
 				42C468761F896D1E0058E02A /* UITextField+Validating.swift */,
 			);
@@ -134,6 +170,7 @@
 				42C98C8E1F87BCE1000FC479 /* SupportingFiles */,
 				42C98C761F87AE2C000FC479 /* AppDelegate.swift */,
 				42C98C981F87CF6A000FC479 /* Core */,
+				421B82411F8A61DB00C41F1E /* Models */,
 				42C98C9C1F87D297000FC479 /* ViewModels */,
 				42C98C991F87CF73000FC479 /* Views */,
 			);
@@ -156,7 +193,6 @@
 			children = (
 				42C98C8A1F87B64C000FC479 /* Constants.swift */,
 				42C98C961F87CC60000FC479 /* DataService.swift */,
-				42C4685B1F8924480058E02A /* Result.swift */,
 				42C468731F8964D70058E02A /* Extensions */,
 			);
 			name = Core;
@@ -169,6 +205,8 @@
 				42C98C781F87AE2C000FC479 /* CreateAccountViewController.swift */,
 				42C98C941F87C3FA000FC479 /* LoginPageViewController.swift */,
 				42C468781F8985360058E02A /* JokesTableViewController.swift */,
+				42FD8F131F8AC61F0092AE9D /* JokeTableViewCell.swift */,
+				421B823D1F8A5F0800C41F1E /* AddJokeViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -178,6 +216,9 @@
 			children = (
 				42C98C9A1F87D28F000FC479 /* CreateAccountViewModel.swift */,
 				42C468741F8964FC0058E02A /* LoginViewModel.swift */,
+				421B82421F8A666E00C41F1E /* AddJokeViewModel.swift */,
+				42FD8F151F8AC74C0092AE9D /* JokesViewModel.swift */,
+				4232CC031F8BABA50061CC7E /* JokeViewModel.swift */,
 				42C468701F89646E0058E02A /* SigningProtocols */,
 				42C4686F1F89645F0058E02A /* ValidationProtocols */,
 			);
@@ -343,23 +384,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42AC3F141F8A8025007BFCC7 /* GetUserType.swift in Sources */,
+				421B82401F8A61D600C41F1E /* Joke.swift in Sources */,
 				42C98C791F87AE2C000FC479 /* CreateAccountViewController.swift in Sources */,
 				42C4686C1F8963660058E02A /* PasswordValidateTypes.swift in Sources */,
 				42C98C951F87C3FA000FC479 /* LoginPageViewController.swift in Sources */,
+				421B823E1F8A5F0800C41F1E /* AddJokeViewController.swift in Sources */,
+				42FD8F141F8AC61F0092AE9D /* JokeTableViewCell.swift in Sources */,
 				42C468771F896D1E0058E02A /* UITextField+Validating.swift in Sources */,
 				42C98C771F87AE2C000FC479 /* AppDelegate.swift in Sources */,
+				4232CC061F8BAED60061CC7E /* GetCurrentUserType.swift in Sources */,
 				42C468661F8960D60058E02A /* SignUpType.swift in Sources */,
 				42C98C8B1F87B64C000FC479 /* Constants.swift in Sources */,
+				42AC3F181F8A92A2007BFCC7 /* JokeValidateType.swift in Sources */,
 				42C468721F8964BD0058E02A /* Variable+validatingBySymbolsCount.swift in Sources */,
 				42C468791F8985360058E02A /* JokesTableViewController.swift in Sources */,
 				42C4686E1F89640A0058E02A /* IsAllValidType.swift in Sources */,
 				42C468751F8964FC0058E02A /* LoginViewModel.swift in Sources */,
-				42C468601F895CCE0058E02A /* UITextField+rxıindings.swift in Sources */,
+				421B82431F8A666E00C41F1E /* AddJokeViewModel.swift in Sources */,
+				42C468601F895CCE0058E02A /* UITextField+rxBindings.swift in Sources */,
 				42C468641F8960C80058E02A /* SignInType.swift in Sources */,
-				42C468621F8960B20058E02A /* GetUserType.swift in Sources */,
+				42C468621F8960B20058E02A /* CreateUserType.swift in Sources */,
 				42C4685C1F8924480058E02A /* Result.swift in Sources */,
 				42C4686A1F8963120058E02A /* EmailValideType.swift in Sources */,
+				42FD8F161F8AC74C0092AE9D /* JokesViewModel.swift in Sources */,
+				42AC3F161F8A840F007BFCC7 /* Errors.swift in Sources */,
 				42C4685E1F8946BD0058E02A /* UIAlertController+showErrorAlert.swift in Sources */,
+				4232CC041F8BABA50061CC7E /* JokeViewModel.swift in Sources */,
+				421B82451F8A673900C41F1E /* User.swift in Sources */,
 				42C468681F8962FC0058E02A /* UsernameValideType.swift in Sources */,
 				42C98C971F87CC60000FC479 /* DataService.swift in Sources */,
 				42C98C9B1F87D28F000FC479 /* CreateAccountViewModel.swift in Sources */,

@@ -10,5 +10,6 @@ import Foundation
 
 enum Result<T> {
     case Success(T)
-    case Error(Error)
+    case Error(JokeError)
 }
+

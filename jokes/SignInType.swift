@@ -10,12 +10,12 @@ import Foundation
 import RxCocoa
 import FirebaseAuth
 
-protocol SignInType: GetUserType {
+protocol SignInType: CreateUserType {
     func signIn(withEmail email: String, andPassword password: String) -> Driver<Result<User>>
 }
 
 extension SignInType {
     func signIn(withEmail email: String, andPassword password: String) -> Driver<Result<User>> {
-        return getUserFor(email: email, password: password, method: Auth.auth().signIn)
+        return createUserFor(email: email, password: password, method: Auth.auth().signIn)
     }
 }

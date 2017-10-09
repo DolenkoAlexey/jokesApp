@@ -38,7 +38,7 @@ class LoginPageViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if Auth.auth().currentUser != nil {
-            self.performSegue(withIdentifier: Constants.SegueIdentifiers.LogIn, sender: nil)
+            performSegue(withIdentifier: Constants.SegueIdentifiers.LogIn, sender: nil)
         }
     }
     
@@ -82,6 +82,17 @@ class LoginPageViewController: UIViewController {
             }).disposed(by: disposeBag)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.SegueIdentifiers.SignUp,
+            let createAccountViewController = (segue.destination as? UINavigationController)?.viewControllers[0] as? CreateAccountViewController {
+            createAccountViewController.viewModel = CreateAccountViewModel()
+        }
+        
+        if segue.identifier == Constants.SegueIdentifiers.LogIn,
+            let jokesViewController = (segue.destination as? UINavigationController)?.viewControllers[0] as? JokesTableViewController {
+            jokesViewController.viewModel = JokesViewModel()
+        }
+    }
     
     @IBAction func cancel(_ segue: UIStoryboardSegue) { }
 }

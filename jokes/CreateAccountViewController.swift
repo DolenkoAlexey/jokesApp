@@ -33,33 +33,31 @@ class CreateAccountViewController: UIViewController {
         return passwordTextField.text
     }
     
-    var viewModel: CreateAccountViewModelType! { /// TODO DIP
-        didSet {
-            fields = [
-                emailTextField: viewModel.isEmailValid,
-                passwordAgainTextField: viewModel.isPasswordAgainValid,
-                passwordTextField: viewModel.isPasswordValid,
-                userNameTextField: viewModel.isUsernameValid
-            ]
-        }
-    }
-    
+    var viewModel: CreateAccountViewModelType!
     
     private let disposeBag = DisposeBag()
     private var fields: [UITextField: Observable<Bool>]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewModel = CreateAccountViewModel()
         setup()
     }
     
     private func setup() {
+        setupFields()
         setupBindings()
         setupValidation()
         setupPasswordCheck()
         setupCreateUserButtonTapped()
+    }
+    
+    private func setupFields() {
+        fields = [
+            emailTextField: viewModel.isEmailValid,
+            passwordAgainTextField: viewModel.isPasswordAgainValid,
+            passwordTextField: viewModel.isPasswordValid,
+            userNameTextField: viewModel.isUsernameValid
+        ]
     }
     
     private func setupBindings() {
@@ -95,7 +93,7 @@ class CreateAccountViewController: UIViewController {
                 return self.viewModel.signUp(withEmail: self.email!, andPassword: self.password!)
             }.flatMapLatest {[unowned self] result -> Driver<Result<User>> in
                 switch result {
-                case .Success(let _):
+                case .Success(_):
                     self.performSegue(withIdentifier: Constants.SegueIdentifiers.NewUserLoggedIn, sender: nil)
                 case .Error(let error):
                     UIAlertController.showErrorAlert(error.localizedDescription, context: self)
@@ -111,5 +109,12 @@ class CreateAccountViewController: UIViewController {
                     UIAlertController.showErrorAlert(error.localizedDescription, context: self)
                 }
             }).disposed(by: disposeBag)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.SegueIdentifiers.NewUserLoggedIn,
+            let jokesViewController = (segue.destination as? UINavigationController)?.viewControllers[0] as? JokesTableViewController {
+            jokesViewController.viewModel = JokesViewModel()
+        }
     }
 }

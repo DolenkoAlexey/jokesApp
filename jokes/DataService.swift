@@ -8,7 +8,7 @@
 
 import Foundation
 import Firebase
-import FirebaseDatabase
+
 
 class DataService {
     static let sharedInstance = DataService()
@@ -25,5 +25,10 @@ class DataService {
     
     func createNewAccount(uid: String, user: Dictionary<String, String>) {
         usersRef.child(uid).setValue(user)
+    }
+    
+    func createNewJoke(joke: Dictionary<String, Any>) {
+        let newJoke = jokesRef.childByAutoId()
+        newJoke.setValue(joke)
     }
 }
