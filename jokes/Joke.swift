@@ -10,7 +10,7 @@ import Firebase
 import FirebaseDatabase
 
 struct Joke {
-    let jokeRef: DatabaseReference!
+    let jokeRef: DatabaseReference
     
     let key: String
     let text: String

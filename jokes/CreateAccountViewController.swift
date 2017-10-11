@@ -21,17 +21,9 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var passwordsArentEqualLabel: UILabel!
     
-    private var email: String? {
-        return emailTextField.text
-    }
-    
-    private var username: String? {
-        return userNameTextField.text
-    }
-    
-    private var password: String? {
-        return passwordTextField.text
-    }
+    private var email: String? { return emailTextField.text }
+    private var username: String? { return userNameTextField.text }
+    private var password: String? { return passwordTextField.text }
     
     var viewModel: CreateAccountViewModelType!
     

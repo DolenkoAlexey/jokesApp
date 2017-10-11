@@ -31,4 +31,17 @@ class DataService {
         let newJoke = jokesRef.childByAutoId()
         newJoke.setValue(joke)
     }
+    
+    
+    
+    func getJoke(from snapshot: DataSnapshot) -> Joke? {
+        guard let post = snapshot.value as? Dictionary<String, Any> else { return nil }
+        
+        let key = snapshot.key
+        let jokeText = post["jokeText"] as? String ?? "Joke not found"
+        let votes = post["votes"] as? Int ?? -1
+        let username = post["author"] as? String ?? "Unknown author"
+        
+        return Joke(key: key, votes: votes, text: jokeText, username: username)
+    }
 }

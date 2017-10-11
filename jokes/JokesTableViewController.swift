@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 
 class JokesTableViewController: UITableViewController {
+    private var jokes = [Joke]()
 
     @IBAction func LogOut(_ sender: UIBarButtonItem) {
         try? Auth.auth().signOut()
@@ -36,26 +37,23 @@ class JokesTableViewController: UITableViewController {
     }
     
     private func setup() {
-        tableView.delegate = nil
-        tableView.dataSource = nil
+        tableView.delegate = self
+        tableView.dataSource = self
         
         viewModel.getJokes()
             .map {[weak self] result -> [Joke] in
                 switch result {
-                case .Success(let joke):
-                    return joke
+                case .Success(let jokes):
+                    return jokes
                 case .Error(let error):
                     UIAlertController.showErrorAlert(error.localizedDescription, context: self)
                     return []
                 }
             }
             .filterEmpty()
-            .drive(tableView.rx.items(
-                cellIdentifier: Constants.TableViewCellIdentifiers.Joke,
-                cellType: JokeTableViewCell.self)
-            ) { index, joke, cell in
-                cell.viewModel = self.viewModel.getJokeViewModel(by: joke)
-            }.disposed(by: disposeBag)
+            .drive(onNext: {[weak self] newJokes in
+                self?.insert(newJokes: newJokes)
+            }).disposed(by: disposeBag)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,4 +65,33 @@ class JokesTableViewController: UITableViewController {
     }
     
     @IBAction func cancel(_ segue: UIStoryboardSegue) { }
+}
+
+extension JokesTableViewController {
+    func insert(newJokes: [Joke]) {
+        jokes.insert(contentsOf: newJokes, at: 0)
+        
+        let indeces = newJokes.enumerated().map { (jokeIndex, _)  in  IndexPath(row: jokeIndex, section: 0) }
+        
+        tableView.beginUpdates()
+        tableView.insertRows(at: indeces, with: .automatic)
+        tableView.endUpdates()
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return jokes.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCellIdentifiers.Joke, for: indexPath) as? JokeTableViewCell {
+            
+            cell.viewModel = self.viewModel.getJokeViewModel(by: jokes[indexPath.row])
+            return cell
+        }
+        return UITableViewCell()
+    }
 }

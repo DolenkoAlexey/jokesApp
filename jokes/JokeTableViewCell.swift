@@ -38,9 +38,17 @@ class JokeTableViewCell: UITableViewCell {
     }
     
     private func setup() {
-        viewModel.isUserLikedJoke.drive(onNext: {[weak self] isLiked in
-            self?.likeButton.setTitle(isLiked ? "Unlike" : "Like", for: .normal)
+        viewModel.likesCount.drive(onNext: {[weak self] likesCount in
+            self?.votesCountLabel.text = likesCount
         }).disposed(by: disposeBag)
+        
+        viewModel.isUserLikedJoke.drive(onNext: {[weak self] isLiked in
+            self?.setupLike(isLiked: isLiked)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func setupLike(isLiked: Bool) {
+        likeButton.setTitle(isLiked ? "Unlike" : "Like", for: .normal)
     }
     
     private let disposeBag = DisposeBag()

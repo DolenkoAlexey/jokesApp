@@ -28,7 +28,7 @@ extension GetUserType {
                     let username = userDict["name"] as? String  ?? "Unknown User"
                     let votes = userDict["votes"] as? [String] ?? []
             
-                let user = UserModel(uid: uid, name: username, votes: votes)
+                    let user = UserModel(uid: uid, name: username, votes: votes)
             
                     observer.on(.next(.Success(user)))
                     observer.on(.completed)
